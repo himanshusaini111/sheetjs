@@ -1989,6 +1989,9 @@ with automatically-generated "headers" based on the keys of the objects.  The
 default column order is determined by the first appearance of the field using
 `Object.keys`, but can be overridden using the options argument:
 
+**Note:** `header` array passed as option, will be mutated if `Object.keys` has
+fields that are not present in `header` array. This will only append the missing 
+fields in the order that they are inserted in the sheet object.
 | Option Name |  Default | Description                                         |
 | :---------- | :------: | :-------------------------------------------------- |
 |`header`     |          | Use specified column order (default `Object.keys`)  |
